@@ -1,0 +1,39 @@
+{% extends 'movie/base.html'%} {% block content%}
+<div class="">
+  <div class="search-window container">
+    <div class="search-box">
+      {% for movie in context['results']%}
+      <div class="movie-search-box rounded shadow mb-3 p-4">
+        <img
+          src="https://image.tmdb.org/t/p/w500{{movie.poster_path}}"
+          alt=""
+          width="200"
+          height="100%"
+          
+        />
+        <div class="descript p-3">
+          <h1 class="">{{movie['original_title']}}</h1>
+          <!-- <div class="genres">
+              <h4>Genres</h4>
+              {%for genre in movie['genres']%}
+                    <h6 class="">{{genre['name']}}</h4>
+              {% endfor%}
+            </div> -->
+          <div class="">
+            <h1 class="">
+              OverView
+              <span class=""
+                >{{movie['vote_average']}}
+                <span class="star">&#9733;</span></span
+              >
+            </h1>
+            <p class="overflow-auto">{{movie['overview']}}</p>
+          </div>
+        </div>
+      </div>
+
+      {%endfor%}
+    </div>
+  </div>
+</div>
+{% endblock content%}

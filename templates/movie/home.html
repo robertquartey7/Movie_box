@@ -1,0 +1,17 @@
+{% extends 'movie/base.html'%} {% block content%}
+
+<div class="container-fluid">
+    <div class="movie-box">
+        {% include 'movie/components/upcoming_movies.html'%}
+        {% include 'movie/components/todays_hot_movies.html'%}
+        {% include 'movie/components/todays_hot_shows.html'%}
+        {% include 'movie/components/week_hot_movies.html'%}
+        {% include 'movie/components/week_hot_shows.html'%}
+        
+    </div>
+</div>
+</div>
+
+
+
+{% endblock content%}

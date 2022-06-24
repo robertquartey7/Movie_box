@@ -1,0 +1,39 @@
+
+
+<nav class="d-flex justify-content-center bg-dark navbar-dark">
+
+
+
+  <div class="container-fluid navbar">
+    <div class="nav ">
+      <a href="{{ url_for('home')}}" class="navbar-brand">
+        <img src="{{ url_for('static', filename='image/logo.png')}}" alt="movie box"  width="30" height="26">
+        McBox
+      </a>
+    </div>
+  <div class="navbar">
+    <div class="nav">
+      <a href="{{ url_for('home')}}" class="text-light nav-link">Features</a
+      ><a href="{{ url_for('movies')}}" class=" text-light nav-link">Movies</a
+      ><a href="{{ url_for('tvshows')}}" class="text-light nav-link">Tv Shows</a
+      ><a href="" class="text-light nav-link">MovieList</a>
+    </div>
+  </div>
+  <div class="nav text-white">
+      <form action="/search" method="post">
+        <div class="input-group mb-3 search">
+          <label for="searchMovie text-center mr-1">Search:</label>
+          <input type="text" class="form-control"  name="searchMovie" id="searchMovie">
+          <button type="submit" class="input-group-text ">send</button>
+        
+        </div>
+      </form>
+  </div>
+  </div>
+ 
+</nav>
+
+
+<div class="line">
+
+</div>

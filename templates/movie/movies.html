@@ -1,0 +1,34 @@
+{% extends 'movie/base.html'%} {% block content%}
+<div class="Upcoming-movie">
+    <div class="d-flex justify-content-between align-items-center">
+      <h1 class="up-coming ">Movies</h1>
+      <div>
+        <i class="bi bi-arrow-left-circle-fill"></i>
+        <i class="bi bi-arrow-right-circle-fill"></i>
+      </div>
+    </div>
+    <div class="movie-window d-flex justify-content-between flex-wrap container rounded shadow-lg" >
+      {% for movie in context['top_rating'] %}
+      <a href="" class="no-style text-center"> 
+        <div class="movie-content movies-content" >
+          <div class="maintain">
+            <img
+              src="https://image.tmdb.org/t/p/w500{{movie.poster_path}}"
+              alt=""
+              width="200"
+              height="300"
+              class="grow"
+            />
+          </div>    
+          <p class="" >{{movie.original_title}}</p>
+        
+        </div>
+      </a>
+     
+      {%endfor%}
+    </div>
+  </div>
+  {% endblock content%}
+
+
+  

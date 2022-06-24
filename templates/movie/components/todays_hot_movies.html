@@ -1,0 +1,29 @@
+<div class="Upcoming-movie">
+  <div class="d-flex justify-content-between align-items-center">
+    <h1 class="up-coming">Today's Hot Movies</h1>
+    <div>
+      <i class="bi bi-arrow-left-circle-fill"></i>
+      <i class="bi bi-arrow-right-circle-fill"></i>
+    </div>
+  </div>
+  <div class="movie-window rounded shadow-lg" >
+    {% for movie in context['THM_movies'] %}
+    <a href="/details/{{movie.id}}/movie" class="no-style"> 
+      <div class="movie-content movies-content ">
+        <div class="maintain">
+          <img
+            src="https://image.tmdb.org/t/p/w500{{movie.poster_path}}"
+            alt=""
+            width="200"
+            height="300"
+            class="grow"
+          />
+        </div>
+        <p>{{movie.original_title}}</p>
+      
+      </div>
+    </a>
+   
+    {%endfor%}
+  </div>
+</div>
